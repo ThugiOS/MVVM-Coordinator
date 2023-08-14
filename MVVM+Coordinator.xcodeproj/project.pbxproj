@@ -13,6 +13,9 @@
 		27D6D1352A8A807600505EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D6D1332A8A807600505EB2 /* Main.storyboard */; };
 		27D6D1372A8A807700505EB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D6D1362A8A807700505EB2 /* Assets.xcassets */; };
 		27D6D13A2A8A807700505EB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D6D1382A8A807700505EB2 /* LaunchScreen.storyboard */; };
+		27D6D1462A8AB68600505EB2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D6D1452A8AB68600505EB2 /* User.swift */; };
+		27D6D1482A8AB70500505EB2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D6D1472A8AB70500505EB2 /* ViewModel.swift */; };
+		27D6D14B2A8AB7E000505EB2 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D6D14A2A8AB7E000505EB2 /* Dynamic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		27D6D1362A8A807700505EB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27D6D1392A8A807700505EB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27D6D13B2A8A807700505EB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27D6D1452A8AB68600505EB2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		27D6D1472A8AB70500505EB2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		27D6D14A2A8AB7E000505EB2 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		27D6D12C2A8A807500505EB2 /* MVVM+Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				27D6D1432A8AB64700505EB2 /* ViewModels */,
+				27D6D1422A8AB63700505EB2 /* Views */,
+				27D6D1412A8AB5F500505EB2 /* Models */,
+				27D6D1312A8A807600505EB2 /* ViewController.swift */,
 				27D6D12D2A8A807600505EB2 /* AppDelegate.swift */,
 				27D6D12F2A8A807600505EB2 /* SceneDelegate.swift */,
-				27D6D1312A8A807600505EB2 /* ViewController.swift */,
-				27D6D1332A8A807600505EB2 /* Main.storyboard */,
 				27D6D1362A8A807700505EB2 /* Assets.xcassets */,
-				27D6D1382A8A807700505EB2 /* LaunchScreen.storyboard */,
 				27D6D13B2A8A807700505EB2 /* Info.plist */,
 			);
 			path = "MVVM+Coordinator";
+			sourceTree = "<group>";
+		};
+		27D6D1412A8AB5F500505EB2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27D6D1452A8AB68600505EB2 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		27D6D1422A8AB63700505EB2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				27D6D1442A8AB65400505EB2 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		27D6D1432A8AB64700505EB2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				27D6D1492A8AB7BD00505EB2 /* Bindings */,
+				27D6D1472A8AB70500505EB2 /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		27D6D1442A8AB65400505EB2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				27D6D1332A8A807600505EB2 /* Main.storyboard */,
+				27D6D1382A8A807700505EB2 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		27D6D1492A8AB7BD00505EB2 /* Bindings */ = {
+			isa = PBXGroup;
+			children = (
+				27D6D14A2A8AB7E000505EB2 /* Dynamic.swift */,
+			);
+			path = Bindings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27D6D1482A8AB70500505EB2 /* ViewModel.swift in Sources */,
+				27D6D1462A8AB68600505EB2 /* User.swift in Sources */,
 				27D6D1322A8A807600505EB2 /* ViewController.swift in Sources */,
+				27D6D14B2A8AB7E000505EB2 /* Dynamic.swift in Sources */,
 				27D6D12E2A8A807600505EB2 /* AppDelegate.swift in Sources */,
 				27D6D1302A8A807600505EB2 /* SceneDelegate.swift in Sources */,
 			);
