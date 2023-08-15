@@ -8,7 +8,7 @@
 import Foundation
 import UIKit.UIColor
 
-class ViewModel {
+class LoginViewModel {
     // Dynamic это пользовательский класс который занимается биндигом интерфейса и модели данных
     var statusText = Dynamic("")
     var statusColor = Dynamic(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
