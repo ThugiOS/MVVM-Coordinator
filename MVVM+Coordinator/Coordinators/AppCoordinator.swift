@@ -8,8 +8,8 @@
 import UIKit
 
 class AppCoordinator: Coordinator {
-    var navigationController: UINavigationController
     
+    var navigationController: UINavigationController
     // залогинелся ли
     var isLoggedIn: Bool = false
     
@@ -19,7 +19,7 @@ class AppCoordinator: Coordinator {
     
     func start() {
         if isLoggedIn {
-            // showMain()
+             showMain()
         } else {
              showLogin()
         }
@@ -33,5 +33,11 @@ class AppCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
+    func showMain() {
+        
+    }
     
+    func showDetail() {
+        
+    }
 }
