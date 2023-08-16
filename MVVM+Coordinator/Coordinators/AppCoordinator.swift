@@ -45,6 +45,11 @@ class AppCoordinator: Coordinator {
     }
     
     func showDetail() {
-        
+        let vc = DetailViewController.createObject()
+        let viewModel = DetailViewModel()
+        viewModel.model = UserData.userData
+        vc.coordinator = self
+        vc.viewModel = viewModel
+        navigationController.pushViewController(vc, animated: true)
     }
 }

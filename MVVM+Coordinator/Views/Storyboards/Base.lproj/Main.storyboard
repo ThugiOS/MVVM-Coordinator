@@ -244,15 +244,21 @@
                             <constraint firstItem="7kC-hD-ds0" firstAttribute="leading" secondItem="KEJ-f3-gDA" secondAttribute="leading" id="pYg-at-jrv"/>
                             <constraint firstItem="7kC-hD-ds0" firstAttribute="baseline" secondItem="T2C-CU-rQo" secondAttribute="baseline" id="pkh-jH-iNZ"/>
                             <constraint firstItem="zeF-04-TFK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5Dr-m9-LfD" secondAttribute="trailing" constant="8" symbolic="YES" id="rIb-Mw-4Re"/>
-                            <constraint firstItem="rOw-fi-Pl2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KEJ-f3-gDA" secondAttribute="trailing" symbolic="YES" id="rLe-pL-RQr"/>
+                            <constraint firstItem="rOw-fi-Pl2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KEJ-f3-gDA" secondAttribute="trailing" constant="8" symbolic="YES" id="rLe-pL-RQr"/>
                             <constraint firstItem="bng-zp-87a" firstAttribute="firstBaseline" secondItem="ucw-c8-lWb" secondAttribute="firstBaseline" id="rW6-mj-tva"/>
-                            <constraint firstItem="ucw-c8-lWb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bng-zp-87a" secondAttribute="trailing" symbolic="YES" id="tr9-Op-EKK"/>
+                            <constraint firstItem="ucw-c8-lWb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bng-zp-87a" secondAttribute="trailing" constant="8" symbolic="YES" id="tr9-Op-EKK"/>
                             <constraint firstItem="KEJ-f3-gDA" firstAttribute="firstBaseline" secondItem="rOw-fi-Pl2" secondAttribute="firstBaseline" id="ueC-f1-582"/>
                             <constraint firstItem="rbB-6L-tCu" firstAttribute="centerX" secondItem="TnV-4r-b6o" secondAttribute="centerX" id="vpj-fK-PFC"/>
                             <constraint firstItem="5Dr-m9-LfD" firstAttribute="leading" secondItem="bng-zp-87a" secondAttribute="leading" id="wva-ty-afY"/>
                             <constraint firstItem="5Dr-m9-LfD" firstAttribute="baseline" secondItem="zeF-04-TFK" secondAttribute="baseline" id="xjt-nl-W0O"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="rOw-fi-Pl2" id="7IK-pN-Df2"/>
+                        <outlet property="emailLabel" destination="zeF-04-TFK" id="fcd-XV-gwX"/>
+                        <outlet property="nameLabel" destination="T2C-CU-rQo" id="4bL-8f-DvL"/>
+                        <outlet property="phoneLabel" destination="ucw-c8-lWb" id="8AX-cB-Qf7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6zO-aK-q9I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
