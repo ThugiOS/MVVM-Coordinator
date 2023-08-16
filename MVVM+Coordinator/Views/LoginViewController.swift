@@ -38,8 +38,13 @@ class LoginViewController: UIViewController, Storyboardable {
 
     }
 
+//TODO: переделать
     @IBAction func loginButtonPressed(_ sender: Any) {
         viewModel!.userButtonPressed(login: loginField.text ?? "!", password: passwordField.text ?? "!")
+        if viewModel!.isLoggedIn {
+            coordinator?.isLoggedIn = viewModel!.isLoggedIn
+            coordinator?.showMain(login: loginField.text ?? "")
+        }
     }
 }
 

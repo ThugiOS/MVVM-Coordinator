@@ -18,9 +18,11 @@ class LoginViewModel {
         if login != User.logins[0].login || password != User.logins[0].password {
             statusText.value = "Log in failed."
             statusColor.value = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+            isLoggedIn = false
         } else {
             statusText.value = "You successfully logged in."
             statusColor.value = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+            isLoggedIn = true
         }
     }
 }

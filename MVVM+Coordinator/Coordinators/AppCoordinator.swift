@@ -19,7 +19,7 @@ class AppCoordinator: Coordinator {
     
     func start() {
         if isLoggedIn {
-             showMain()
+            showMain(login: User.logins[0].login ?? "Login")
         } else {
              showLogin()
         }
@@ -33,8 +33,15 @@ class AppCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func showMain() {
-        
+    func showMain(login: String) {
+        let vc = MainViewController.createObject()
+        let viewModel = MainViewModel()
+        viewModel.login = login
+        vc.coordinator = self
+        vc.viewModel = viewModel
+        navigationController.viewControllers.removeAll()
+        navigationController.pushViewController(vc, animated: true)
+
     }
     
     func showDetail() {
