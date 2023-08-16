@@ -16,6 +16,8 @@
 		27D6D1482A8AB70500505EB2 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D6D1472A8AB70500505EB2 /* LoginViewModel.swift */; };
 		27D6D14B2A8AB7E000505EB2 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D6D14A2A8AB7E000505EB2 /* Dynamic.swift */; };
 		27D6D14F2A8C005200505EB2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D6D14E2A8C005200505EB2 /* Coordinator.swift */; };
+		27DDA54C2A8CBC5B00EB1413 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDA54B2A8CBC5B00EB1413 /* AppCoordinator.swift */; };
+		27DDA54F2A8CBF7700EB1413 /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDA54E2A8CBF7700EB1413 /* Storyboardable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		27D6D1472A8AB70500505EB2 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		27D6D14A2A8AB7E000505EB2 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		27D6D14E2A8C005200505EB2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		27DDA54B2A8CBC5B00EB1413 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		27DDA54E2A8CBF7700EB1413 /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 		27D6D1422A8AB63700505EB2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				27DDA54D2A8CBF4D00EB1413 /* Protocols */,
 				27D6D1312A8A807600505EB2 /* LoginViewController.swift */,
 				27D6D1442A8AB65400505EB2 /* Storyboards */,
 			);
@@ -120,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				27D6D14D2A8C003A00505EB2 /* Protocols */,
+				27DDA54B2A8CBC5B00EB1413 /* AppCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -128,6 +134,14 @@
 			isa = PBXGroup;
 			children = (
 				27D6D14E2A8C005200505EB2 /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		27DDA54D2A8CBF4D00EB1413 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				27DDA54E2A8CBF7700EB1413 /* Storyboardable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -207,8 +221,10 @@
 				27D6D1462A8AB68600505EB2 /* User.swift in Sources */,
 				27D6D14F2A8C005200505EB2 /* Coordinator.swift in Sources */,
 				27D6D1322A8A807600505EB2 /* LoginViewController.swift in Sources */,
+				27DDA54F2A8CBF7700EB1413 /* Storyboardable.swift in Sources */,
 				27D6D14B2A8AB7E000505EB2 /* Dynamic.swift in Sources */,
 				27D6D12E2A8A807600505EB2 /* AppDelegate.swift in Sources */,
+				27DDA54C2A8CBC5B00EB1413 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

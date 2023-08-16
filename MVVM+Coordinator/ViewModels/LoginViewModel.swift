@@ -12,6 +12,7 @@ class LoginViewModel {
     // Dynamic это пользовательский класс который занимается биндигом интерфейса и модели данных
     var statusText = Dynamic("")
     var statusColor = Dynamic(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
+    var isLoggedIn: Bool = false
     
     func userButtonPressed(login: String, password: String) {
         if login != User.logins[0].login || password != User.logins[0].password {
