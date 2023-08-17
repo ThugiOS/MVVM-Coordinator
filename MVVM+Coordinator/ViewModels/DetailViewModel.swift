@@ -11,3 +11,5 @@ import UIKit
 class DetailViewModel {
     var model: UserData?
 }
+
+
