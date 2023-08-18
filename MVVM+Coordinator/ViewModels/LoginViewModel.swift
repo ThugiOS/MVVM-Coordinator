@@ -17,6 +17,7 @@ enum ViewStates {
 }
 
 class LoginViewModel {
+    
     @Published var email = ""
     @Published var password = ""
     @Published var state: ViewStates = .none

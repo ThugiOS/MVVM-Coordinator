@@ -93,6 +93,7 @@
                     </view>
                     <connections>
                         <outlet property="label" destination="e88-PA-y4e" id="uxy-E9-Gg3"/>
+                        <outlet property="loginButton" destination="vbz-VV-XdA" id="3Ap-IX-hHj"/>
                         <outlet property="loginField" destination="Rob-sA-F39" id="2nn-dT-PAo"/>
                         <outlet property="passwordField" destination="dJo-4k-6QE" id="12F-G8-5K1"/>
                     </connections>

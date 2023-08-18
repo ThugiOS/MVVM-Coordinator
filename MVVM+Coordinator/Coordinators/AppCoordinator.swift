@@ -29,7 +29,7 @@ class AppCoordinator: Coordinator {
         let vc = LoginViewController.createObject()
         vc.coordinator = self
         vc.viewModel = LoginViewModel()
-        vc.viewModel?.isLoggedIn = isLoggedIn
+//        vc.viewModel.isLoggedIn = isLoggedIn
         navigationController.pushViewController(vc, animated: true)
     }
     
