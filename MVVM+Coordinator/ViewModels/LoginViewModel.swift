@@ -18,6 +18,8 @@ enum ViewStates {
 
 class LoginViewModel {
     
+    var isLoggedIn: Bool = false
+    
     @Published var email = ""
     @Published var password = ""
     @Published var state: ViewStates = .none
@@ -40,25 +42,90 @@ class LoginViewModel {
             .eraseToAnyPublisher()
     }
     
-    
-    // отправка запроса на сервер
-    func submitLogin() {
+    // Проверка логина
+    func userButtonPressed() {
         state = .loading
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
-            guard let self = self else { return }
-            if self.isCorrectLogin() {
-                state = .success
-            } else {
-                state = .failed
-            }
+        if self.isCorrectLogin() {
+            self.state = .success
+            isLoggedIn = true
+        } else {
+            self.state = .failed
+            isLoggedIn = false
         }
+        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) { [weak self] in
+//            guard let self = self else { return }
+//            if self.isCorrectLogin() {
+//                self.state = .success
+//                isLoggedIn = true
+//            } else {
+//                self.state = .failed
+//                isLoggedIn = false
+//            }
+//        }
+//
+        
+        
+        // сделаем проверку из сети
+//        if login != User.logins[0].login || password != User.logins[0].password {
+//            isLoggedIn = false
+//        } else {
+//            isLoggedIn = true
+//        }
     }
+    
+//    func submitLogin() {
+//        state = .loading
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) { [weak self] in
+//            guard let self = self else { return }
+//            if self.isCorrectLogin() {
+//                self.state = .success
+//            } else {
+//                self.state = .failed
+//            }
+//        }
+//    }
     
     func isCorrectLogin() -> Bool {
         return email == "test@mail.com" && password == "12345"
     }
+    
+
 }
+
+
+
+
+
+
+
+
+
+
+// отправка запроса на сервер
+//    func submitLogin() {
+//        state = .loading
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
+//            guard let self = self else { return }
+//            if self.isCorrectLogin() {
+//                state = .success
+//            } else {
+//                state = .failed
+//            }
+//        }
+//    }
+
+//    func isCorrectLogin() -> Bool {
+//        return email == "test@mail.com" && password == "12345"
+//    }
+
+
+
+
+
 
 
 //class LoginViewModel {

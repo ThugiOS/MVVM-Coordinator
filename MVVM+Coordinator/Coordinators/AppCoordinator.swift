@@ -7,7 +7,12 @@
 
 import UIKit
 
-class AppCoordinator: Coordinator {
+protocol CoordinatorProtocol {
+    var navigationController: UINavigationController { get set }
+    func start()
+}
+
+class AppCoordinator: CoordinatorProtocol {
     
     var navigationController: UINavigationController
     // залогинелся ли
@@ -25,11 +30,12 @@ class AppCoordinator: Coordinator {
         }
     }
     
+    // MARK: - Screens
     func showLogin() {
         let vc = LoginViewController.createObject()
         vc.coordinator = self
         vc.viewModel = LoginViewModel()
-//        vc.viewModel.isLoggedIn = isLoggedIn
+        vc.viewModel.isLoggedIn = isLoggedIn
         navigationController.pushViewController(vc, animated: true)
     }
     

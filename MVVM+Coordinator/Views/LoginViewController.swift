@@ -12,7 +12,6 @@ class LoginViewController: UIViewController, Storyboardable {
 
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var label: UILabel!
     
     @IBOutlet weak var loginButton: UIButton!
     
@@ -20,20 +19,12 @@ class LoginViewController: UIViewController, Storyboardable {
     var coordinator: AppCoordinator?
     var cancellabes = Set<AnyCancellable>()
     
-    func initialState() {
-        label.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1) //#colorLiteral(
-        label.isHidden = true
-        label.text = ""
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
-        initialState()
     }
 
     func bindViewModel() {
-        
         NotificationCenter.default
             .publisher(for: UITextField.textDidChangeNotification, object: loginField)
             .map { ($0.object as! UITextField).text ?? "" }
@@ -52,52 +43,29 @@ class LoginViewController: UIViewController, Storyboardable {
         
         // привязываем подписчика
         viewModel.$state
-                    .sink { [weak self] state in
-                        switch state {
-                        case .loading:
-                            self?.label.isHidden = true
-                            self?.loginButton.isEnabled = false
-                            self?.loginButton.setTitle("Loading..", for: .normal)
-                        case .success:
-                            self?.label.isHidden = false
-                            self?.label.text = "Login success!"
-                            self?.label.textColor = .systemGreen
-                            self?.loginButton.setTitle("Login", for: .normal)
-                        case .failed:
-                            self?.label.isHidden = false
-                            self?.label.text = "Login failed =("
-                            self?.label.textColor = .systemRed
-                            self?.loginButton.setTitle("Login", for: .normal)
-                        case .none:
-                            break
-                        }
-                    }
-                    .store(in: &cancellabes)
-        
-        
-//        viewModel!.statusText.bind({ (statusText) in
-//            DispatchQueue.main.async {
-//                self.label.text = statusText
-//            }
-//        })
-//
-//        viewModel!.statusColor.bind({ (statusColor) in
-//            DispatchQueue.main.async {
-//                self.label.textColor = statusColor
-//            }
-//        })
+            .sink { [weak self] state in
+                switch state {
+                case .loading:
+                    self?.loginButton.isEnabled = false
+                    self?.loginButton.setTitle("Loading..", for: .normal)
+                case .success:
+                    self?.loginButton.setTitle("Login", for: .normal)
+                case .failed:
+                    self?.loginButton.setTitle("Login", for: .normal)
+                case .none:
+                    break
+                }
+            }
+            .store(in: &cancellabes)
     }
 
 //TODO: переделать
     @IBAction func loginButtonPressed(_ sender: Any) {
-        viewModel.submitLogin()
-        
-        
-//        viewModel!.userButtonPressed(login: loginField.text ?? "!", password: passwordField.text ?? "!")
-//        if viewModel!.isLoggedIn {
-//            coordinator?.isLoggedIn = viewModel!.isLoggedIn
-//            coordinator?.showMain(login: loginField.text ?? "")
-//        }
+        viewModel.userButtonPressed()
+        if viewModel.isLoggedIn {
+            coordinator?.isLoggedIn = viewModel.isLoggedIn
+            coordinator?.showMain(login: loginField.text ?? "")
+        }
     }
 }
 

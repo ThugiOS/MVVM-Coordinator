@@ -17,7 +17,6 @@ class MainViewController: UIViewController, Storyboardable {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Main screen")
-//        coordinator?.showDetail()
         mainLabel.text = "Hello \(viewModel?.login ?? "Login")"
     }
     
