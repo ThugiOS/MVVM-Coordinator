@@ -110,7 +110,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcl-5a-Ibd">
-                                <rect key="frame" x="158" y="155" width="77" height="39"/>
+                                <rect key="frame" x="16" y="155" width="361" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -135,7 +135,7 @@
                         <viewLayoutGuide key="safeArea" id="Duw-Q4-mKX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jcl-5a-Ibd" firstAttribute="leading" secondItem="Duw-Q4-mKX" secondAttribute="leading" constant="158" id="0HT-EC-tcd"/>
+                            <constraint firstItem="jcl-5a-Ibd" firstAttribute="leading" secondItem="Duw-Q4-mKX" secondAttribute="leading" constant="16" id="0HT-EC-tcd"/>
                             <constraint firstItem="jcl-5a-Ibd" firstAttribute="top" secondItem="Duw-Q4-mKX" secondAttribute="top" constant="96" id="0ce-L7-NAa"/>
                             <constraint firstItem="Duw-Q4-mKX" firstAttribute="bottom" secondItem="k9q-IT-yUb" secondAttribute="bottom" constant="243" id="5Iq-FZ-spM"/>
                             <constraint firstItem="jcl-5a-Ibd" firstAttribute="centerX" secondItem="hha-gg-9Be" secondAttribute="centerX" id="CfC-ca-Rqy"/>

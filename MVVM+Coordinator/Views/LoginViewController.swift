@@ -24,6 +24,17 @@ class LoginViewController: UIViewController, Storyboardable {
         bindViewModel()
     }
 
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        viewModel.userButtonPressed()
+        if viewModel.isLoggedIn {
+            coordinator?.isLoggedIn = viewModel.isLoggedIn
+            coordinator?.showMain(login: loginField.text ?? "")
+        }
+    }
+}
+
+
+extension LoginViewController {
     func bindViewModel() {
         NotificationCenter.default
             .publisher(for: UITextField.textDidChangeNotification, object: loginField)
@@ -58,15 +69,4 @@ class LoginViewController: UIViewController, Storyboardable {
             }
             .store(in: &cancellabes)
     }
-
-//TODO: переделать
-    @IBAction func loginButtonPressed(_ sender: Any) {
-        viewModel.userButtonPressed()
-        if viewModel.isLoggedIn {
-            coordinator?.isLoggedIn = viewModel.isLoggedIn
-            coordinator?.showMain(login: loginField.text ?? "")
-        }
-    }
 }
-
-
